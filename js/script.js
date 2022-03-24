@@ -8,8 +8,8 @@ const bairro = document.getElementById('bairro');
 // BUSCAR CEP
 const search = document.getElementById('btn');
 search.addEventListener('click', (e) =>{
-    fetch(`https://cep.awesomeapi.com.br/json/`+ cep.value + ``).then(req => {
-        return req.json();
+    fetch(`https://cep.awesomeapi.com.br/json/`+ cep.value + ``).then(res => {
+        return res.json();
     }).then(dados => {
         cidade.value = dados.city;
         uf.value = dados.state;
